@@ -1,0 +1,15 @@
+FINAL QA SUMMARY — AUGUST 4, 2026
+
+- All 67 pages are present.
+- “Working Preview” and “Module 1” were removed.
+- The introduction transcript begins with “Welcome.”
+- The corrected introduction video is embedded and all media files are present.
+- The alternate Mandy Davis photo appears on page 2.
+- All section landing pages have a Continue button.
+- Section 2, 3, and 4 landing pages do not contain an extra section video.
+- “Session End” appears in the left navigation.
+- The slide-needs document and email requests were reviewed line by line and implemented.
+- Knowledge checks, answer feedback, reflection reveals, scenario responses, navigation, and the optional certificate were function-tested.
+- Local asset and resource paths were checked; no files are missing.
+- Audio segment timing was checked against the media durations.
+- JavaScript syntax and browser interaction tests passed without page or console errors.
