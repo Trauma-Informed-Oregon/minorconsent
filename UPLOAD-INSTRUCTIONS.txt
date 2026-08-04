@@ -1,11 +1,12 @@
-FLAT REPOSITORY FIX
+MINOR CONSENT MODULE — CORRECTED INDEX
 
-Your media files are already in the repository root. This replacement index.html is written to match that exact flat layout.
+1. Open the GitHub repository: trauma-informed-oregon/minorconsent
+2. Choose Add file > Upload files.
+3. Upload index.html from this folder.
+4. GitHub will replace the existing index.html.
+5. Commit directly to the main branch.
+6. Wait for the Pages deployment to finish, then hard-refresh:
+   Mac: Command + Shift + R
+   Windows: Ctrl + Shift + R
 
-1. In GitHub, open the current index.html.
-2. Delete it, or upload this replacement index.html and choose Replace.
-3. Upload .nojekyll to the repository root if it is not already there.
-4. Commit the changes.
-5. Wait for GitHub Pages to finish deploying, then hard refresh.
-
-Do not rename or move the existing logo, photo, video, audio, or resource files.
+No media files need to be uploaded again. This index uses the flat file structure already in the repository.
