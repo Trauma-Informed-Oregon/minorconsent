@@ -1,0 +1,12 @@
+QA COMPLETED
+
+- 65-page module retained.
+- Citation numbers remapped exactly to the Slide Needs document.
+- Complete 30-item reference list retained in the supplied order.
+- OFSN Parent Warmline confidentiality resource included.
+- Plan for Disclosure is in the Disclosure section and has no Consent in the title.
+- Involvement Is Not Required If appears at the beginning of that page.
+- Suggested response changed to Answer.
+- Accordions, answers, examples, and transcripts initialize closed.
+- Dedicated MP3 narration files retained for reliable GitHub/browser playback.
+- Transcripts corrected against the supplied narration transcript, with punctuation and light removal of verbal repetition for readability.

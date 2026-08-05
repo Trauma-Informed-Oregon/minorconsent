@@ -1,10 +1,14 @@
-MINOR CONSENT FINAL AUDIO FIX
+MINOR CONSENT COMPLETE GITHUB PACKAGE
 
-1. Open the GitHub repository Code page.
-2. Choose Add file > Upload files.
-3. Drag index.html AND every narration-page-XX.mp3 file from this folder into the upload area.
-4. GitHub should show index.html as changed/replaced and the MP3 files as new.
-5. Commit directly to main.
-6. Wait for deployment, then hard-refresh the live page.
+1. Download and unzip this package.
+2. Open the GitHub repository Code page.
+3. Choose Add file > Upload files.
+4. Drag every file from this unzipped folder into GitHub.
+5. GitHub will replace index.html and add/update the media files.
+6. Keep all files at the repository root. Do not upload the ZIP itself.
+7. Commit directly to main.
+8. Wait for GitHub Pages deployment, then hard-refresh the live module.
 
-Keep all files at the repository root beside the existing logo, video, and resource files.
+Live site: https://trauma-informed-oregon.github.io/minorconsent/
+
+Both index.html and minor-consent-module-1.html are included so the homepage and older direct links continue to work.
