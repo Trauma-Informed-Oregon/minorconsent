@@ -1,12 +1,10 @@
-MINOR CONSENT MODULE — CORRECTED INDEX
+MINOR CONSENT FINAL AUDIO FIX
 
-1. Open the GitHub repository: trauma-informed-oregon/minorconsent
+1. Open the GitHub repository Code page.
 2. Choose Add file > Upload files.
-3. Upload index.html from this folder.
-4. GitHub will replace the existing index.html.
-5. Commit directly to the main branch.
-6. Wait for the Pages deployment to finish, then hard-refresh:
-   Mac: Command + Shift + R
-   Windows: Ctrl + Shift + R
+3. Drag index.html AND every narration-page-XX.mp3 file from this folder into the upload area.
+4. GitHub should show index.html as changed/replaced and the MP3 files as new.
+5. Commit directly to main.
+6. Wait for deployment, then hard-refresh the live page.
 
-No media files need to be uploaded again. This index uses the flat file structure already in the repository.
+Keep all files at the repository root beside the existing logo, video, and resource files.

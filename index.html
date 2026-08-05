@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Minor Consent module: dedicated audio clips, exact transcripts, citations, and resource update — 2026-08-04 v3 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1429,6 +1430,51 @@
   .centering-concept .audio-player-container .transcript-disclosure summary,
   .centering-concept .audio-player-container .transcript-content{color:var(--tio-navy-dark);}
 
+
+  .slide-reference-numbers{
+    margin-left:auto;
+    margin-right:12px;
+    padding:3px 8px;
+    border-radius:999px;
+    background:var(--card-tint);
+    color:var(--tio-navy-dark);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .eyebrow-row .pos{margin-left:0;}
+  .reference-list{
+    margin:18px 0 0;
+    padding-left:28px;
+    display:grid;
+    gap:14px;
+  }
+  .reference-list li{
+    padding-left:8px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    overflow-wrap:anywhere;
+  }
+  .reference-list a{color:var(--tio-teal-text);font-weight:700;}
+  .centering-concept .audio-player-container{
+    margin-top:28px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,.32);
+    border-radius:12px;
+    background:#FFFFFF;
+    color:var(--tio-navy-dark);
+  }
+  .centering-concept .audio-player-container .transcript-disclosure{
+    background:var(--card-tint);
+    border-color:var(--line);
+  }
+  @media(max-width:700px){
+    .slide-reference-numbers{margin-left:0;margin-right:6px;}
+    .eyebrow-row{flex-wrap:wrap;}
+    .eyebrow-row .pos{margin-left:auto;}
+  }
+
 </style>
 </head>
 <body>
@@ -1512,10 +1558,8 @@ const DATA = [
     "sec": "Getting Started",
     "type": "callout",
     "title": "Disclaimer",
-    "audioFile": "./slide%205-7.m4a",
-    "transcript": "One important disclaimer before we go further: this training is for educational purposes only. Please follow your own organization’s policies, stay within your professional scope of practice when applying anything you learn here. This is not legal advice, and it does not replace the clinical consultation and supervision you need.",
-    "startTime": 1,
-    "endTime": 19,
+    "audioFile": "./narration-page-04.mp3",
+    "transcript": "One important disclaimer before we go further: this training is for educational purposes only. Please follow your own organization’s policies, stay within your professional scope of practice when applying anything you learn here. This is not legal advice, and it doesn’t replace the clinical consultation and supervision you need.",
     "body": [
       "This training is for educational purposes only, and participants should follow their organization's policies and professional scope of practice when applying any information presented. This is not legal advice, nor does it replace clinical consultation and supervision needs."
     ]
@@ -1524,10 +1568,8 @@ const DATA = [
     "sec": "Getting Started",
     "type": "agenda",
     "title": "Where We Are Headed",
-    "audioFile": "./slide%205-7.m4a",
-    "transcript": "So here’s where we’re headed with this module. We’re going to start with some context setting, then move through key definitions, and then dig into the three core areas: consent, involvement, and disclosure. From there, we’ll work through real-world scenarios, talk through considerations, and end with resources you can take with you.",
-    "startTime": 20,
-    "endTime": 41,
+    "audioFile": "./narration-page-05.mp3",
+    "transcript": "So here’s where we’re headed with this module. We’re going to start with some context setting, then we’ll move through some key definitions, then dig into the three core areas, which are consent, involvement, and disclosure. From there, we’ll work through some real-world scenarios, talk through considerations, and end with resources you can take with you.",
     "items": [
       "Context Setting & Objectives",
       "Definitions",
@@ -1545,10 +1587,8 @@ const DATA = [
     "type": "stat",
     "quote": "Mental health is a basic human right for all people. Everyone, whoever and wherever they are, has a deserving and inherent right to the highest attainable standard of mental health.",
     "source": "World Health Organization, 2023",
-    "audioFile": "./slide%205-7.m4a",
-    "transcript": "I’d like to ground us here. The World Health Organization says that mental health is a basic human right for all people. Everyone, whoever and wherever they are, has an inherent and deserving right to the highest attainable standard of mental health. Some Oregon-specific data is that 60% of Oregon’s 8th and 11th graders report a positive view of their own mental and emotional health. And nearly one in five 11th graders, almost 20%, report having emotional or mental health care needs that went unmet in the past year.",
-    "startTime": 42,
-    "endTime": 80,
+    "audioFile": "./narration-page-06.mp3",
+    "transcript": "But I’d like to ground us here. The World Health Organization says that mental health is a basic human right for all people. Everyone, whoever and wherever they are, has an inherent and deserving right to the highest attainable standard of mental health. Some Oregon-specific data is that 60% of Oregon’s 8th and 11th graders report a positive view of their own mental and emotional health. And nearly one in five 11th graders, almost 20%, report having emotional or mental health care needs that went unmet in the past year.",
     "stats": [
       {
         "value": "60%",
@@ -1558,28 +1598,34 @@ const DATA = [
         "value": "1 in 5",
         "label": "of 11th graders report having emotional or mental health care needs that were not met during the past year (2025)"
       }
+    ],
+    "refs": [
+      1,
+      2
     ]
   },
   {
     "sec": "Getting Started",
     "type": "text",
     "title": "Minor Consent to Behavioral Health Services",
-    "audioFile": "./slide%205-7.m4a",
-    "transcript": "So how does minor consent law fit into all of this? Oregon’s minor consent to behavioral health care is one tool for meeting that inherent right to mental health care. It is not the whole solution, but it is a meaningful piece of removing barriers to access.",
-    "startTime": 81,
-    "endTime": 103,
+    "audioFile": "./narration-page-07.mp3",
+    "transcript": "So how does minor consent law fit into all of this? Oregon’s minor consent law for behavioral health care is one tool for meeting that inherent right to mental health care. It’s not the whole solution, but it’s a meaningful piece of removing barriers to access.",
     "body": [
       "Oregon's minor consent law for behavioral health care is one tool for meeting that inherent right to mental health care. It is not the whole solution, but it is a meaningful part of removing barriers to access."
+    ],
+    "refs": [
+      1,
+      6,
+      12,
+      14
     ]
   },
   {
     "sec": "Getting Started",
     "type": "objectives",
     "title": "Learning Objectives",
-    "audioFile": "./slide%208-9.m4a",
+    "audioFile": "./narration-page-08.mp3",
     "transcript": "My hope by the end of this module is that you’ll walk away with five things: a basic understanding of Oregon’s minor consent law for behavioral health care; clarity on the age of consent for these services; an understanding of the difference between consenting to services and consenting to disclosure of information; knowledge of if and when parents or guardians need to be involved; and, maybe most importantly, the ability to recognize when you need more information or consultation.",
-    "startTime": 0,
-    "endTime": 34,
     "items": [
       "Build a basic understanding of Oregon's minor consent law for behavioral health care.",
       "Identify the age of consent for outpatient behavioral health services.",
@@ -1592,10 +1638,8 @@ const DATA = [
     "sec": "Getting Started",
     "type": "matrix",
     "title": "Navigating This Content",
-    "audioFile": "./slide%208-9.m4a",
-    "transcript": "At Trauma Informed Oregon, one way we apply a trauma-informed lens to our work is to continually ask: What helps? What harms or hurts? And how might identity influence that impact? As we explore Oregon’s minor consent law for behavioral health care, the concepts of consent, parent and guardian involvement, disclosure, and even the definitions themselves, I invite you to think about what helps, what hurts, and for whom. Consider the impacts on young people, parents and guardians, providers, organizations, peers, and natural supports. Is there anyone else you are thinking about as we explore this content?",
-    "startTime": 34,
-    "endTime": 79.5,
+    "audioFile": "./narration-page-09.mp3",
+    "transcript": "At Trauma Informed Oregon, one way that we apply a trauma-informed lens to our work is to continually ask: What helps? What harms or hurts? And how might identity influence that impact? So as we explore minor consent to behavioral health care, the concepts of consent, parent and guardian involvement, disclosure, and even the definitions themselves, I invite you to think about what helps, what hurts, and for whom. Think about the impact on young people, parents and guardians, providers, organizations, peers, and natural supports. Is there anybody else you’re thinking about as we explore this content?",
     "questions": [
       "How might this help?",
       "How might this hurt?",
@@ -1639,6 +1683,10 @@ const DATA = [
         "term": "Behavioral Health 'Provider'",
         "def": "means an individual, organizational provider, or Community Mental Health Program as designated under ORS 430.637 (1)(b) that holds a current certificate to provide outpatient behavioral health treatment or prevention services pursuant to these and other applicable service delivery rules. (OAR 309-019-0105 — Definitions)"
       }
+    ],
+    "refs": [
+      3,
+      4
     ]
   },
   {
@@ -1658,6 +1706,9 @@ const DATA = [
         "term": "Outpatient Therapy",
         "def": "means medically appropriate services to an individual, and when appropriate their family or significant other, for the treatment of a behavioral health diagnosis. *Subject to change — final definition in rule will be in place 1/1/2027. (OAR 309-008)"
       }
+    ],
+    "refs": [
+      5
     ]
   },
   {
@@ -1677,6 +1728,10 @@ const DATA = [
         "term": "Parent",
         "def": "means the genetic or adoptive mother and the legal parent of the child. A legal parent is a person who has adopted the child or whose parentage has been established or declared under ORS 109.065."
       }
+    ],
+    "refs": [
+      6,
+      7
     ]
   },
   {
@@ -1763,50 +1818,48 @@ const DATA = [
     "extra": [
       "Please consult your professional organization and agency for more detail about the consent process."
     ],
-    "reflectionPrompt": "How does your professional organization or agency approach consent, and what steps do you use?"
+    "reflectionPrompt": "How does your professional organization or agency approach consent, and what steps do you use?",
+    "refs": [
+      8,
+      10,
+      11
+    ]
   },
   {
     "sec": "About Consent",
     "type": "text",
     "eyebrow": "CONSENT",
     "title": "Consent Across Medical and Reproductive Health",
-    "audioFile": "./slide%2018-21.m4a",
-    "transcript": "So now let’s look at consent across a few different domains, starting outside behavioral health so that you have the full picture. Minors in Oregon age 15 and older can consent to medical and dental services from specific licensed providers without parent or legal guardian consent. Minors of any age in Oregon can access reproductive health care services and information from a licensed provider without parent or legal guardian consent.",
-    "startTime": 2.35,
-    "endTime": 27.47,
+    "audioFile": "./narration-page-19.mp3",
+    "transcript": "So now let’s look at consent across a few different domains, starting outside behavioral health so that you have the full picture. Minors in Oregon age 15 and up can consent to medical and dental services from specific licensed providers without parent or legal guardian consent. Minors of any age in Oregon can access reproductive health care services and information from a licensed provider without parent or legal guardian consent.",
     "body": [
       "<strong>Medical and dental:</strong> Minors age 15 and older may consent to medical, dental, optometric, and surgical care from specified licensed providers without parent or guardian consent. (ORS 109.640)",
       "<strong>Reproductive health:</strong> Minors of any age may access reproductive health care services and information from a licensed provider without parent or guardian consent. This may include contraception, prenatal and postnatal care, delivery care, miscarriage management, fertility care, and STI treatment."
     ],
-    "list": []
+    "list": [],
+    "refs": [
+      12
+    ]
   },
   {
     "sec": "About Consent",
     "type": "text",
     "eyebrow": "CONSENT",
     "title": "Consent to Behavioral Health Services",
-    "audioFile": "./slide%2018-21.m4a",
-    "transcript": "A parent or guardian can still consent to behavioral health care on behalf of a young person, even if the young person refuses. We will talk about what that looks like in practice and some strategies as we move through the module. Providers are also required to involve the parent or guardian in the young person’s care prior to the end of services unless there is a clear, documented clinical reason not to. We will break down each of these parts of the law. Before we do, pause and consider: What questions or wonderings do you have at this point?",
-    "startTime": 30.65,
-    "endTime": 87.96,
+    "audioFile": "./narration-page-20.mp3",
+    "transcript": "For behavioral health specifically, this is the heart of our module: a minor who is 14 or older may access outpatient mental health and substance use services without parent or guardian consent. Here’s an important nuance: a parent or guardian can still consent to behavioral health care on behalf of a youth, even if the youth refuses. We’ll talk best practices around this shortly. And providers are required to involve the parent or guardian in the youth’s care prior to the end of services, unless there’s a clear, documented clinical reason not to. Pause here. What questions or wonderings do you have?",
     "body": [
       "A minor who is 14 or older may access outpatient mental health and substance use services without parent or guardian consent.",
       "A parent or guardian may still consent to behavioral health care on behalf of a young person, even if the young person refuses. Best practices for engagement are addressed later in the module.",
       "Providers are required to involve the parent or guardian in the young person’s care prior to the end of services unless there are clear and documented clinical reasons not to."
     ],
     "list": [],
-    "reflectionPrompt": "What questions or wonderings do you have after hearing this definition and these requirements?"
-  },
-  {
-    "sec": "About Consent",
-    "type": "objectives",
-    "eyebrow": "CONSENT",
-    "title": "Plan for Disclosure During Consent",
-    "items": [
-      "Be transparent with young people and families about legal obligations and the provider’s preferences about disclosure.",
-      "Share how families and young people will be notified about requests for disclosure and the provider’s response.",
-      "Continue to revisit and revise disclosure agreements with young people and parents or guardians.",
-      "Be aware of legal, ethical, and organizational obligations about disclosure."
+    "reflectionPrompt": "What questions or wonderings do you have after hearing this definition and these requirements?",
+    "refs": [
+      6,
+      12,
+      13,
+      14
     ]
   },
   {
@@ -1814,12 +1867,15 @@ const DATA = [
     "type": "centering",
     "eyebrow": "CONSENT",
     "title": "Why This Matters",
-    "audioFile": "./slide%2018-21.m4a",
-    "transcript": "I’m also going to bring us back and ground us in the idea that this law is intended to increase access to behavioral health care, that basic human right.",
-    "startTime": 94.49,
-    "endTime": 104.18,
+    "audioFile": "./narration-page-21.mp3",
+    "transcript": "I’m also going to bring us back and ground us in the idea to remember that this law is intended to increase access to behavioral health care, that basic human right.",
     "body": [
       "This law is intended to increase access to behavioral health care, a basic human right. Hold that purpose at the center as you navigate the complexity of applying it."
+    ],
+    "refs": [
+      1,
+      2,
+      12
     ]
   },
   {
@@ -1835,7 +1891,8 @@ const DATA = [
       "The guardian does not read or understand the language in which services are provided.",
       "It would be unsafe for the young person if the guardian found out.",
       "The young person is unsure of, or may not yet understand, the benefit and process of involving their parent or guardian."
-    ]
+    ],
+    "transcript": "Let’s take a moment to explore the reasons, experiences, and needs related to consent and access. Start by taking a minute to type, write down, or share situations where it might be helpful for a young person to access behavioral health care without needing a parent or guardian’s consent. Some experiences we hear about include when a parent or legal guardian is not available because of work or location, or does not feel safe engaging with the agency or system; when a young person does not want to burden their parent or legal guardian; when the young person is practicing developmentally appropriate independence; when the guardian does not read or understand the language in which services are provided; when it could be unsafe for the young person if their parent or guardian found out; or when the young person is not yet sure of, or aware of, the benefit and process of involving the parent or legal guardian."
   },
   {
     "sec": "About Consent",
@@ -1850,14 +1907,15 @@ const DATA = [
       "The young person feels they are okay and these particular services are not what they need.",
       "The young person is experiencing symptoms that affect awareness of the need for care, or they do not feel they deserve care.",
       "The parent or guardian has not been taught about typical adolescent development and expected behaviors."
-    ]
+    ],
+    "transcript": "Take a minute to type, write this down, or share ideas about situations where a parent or guardian wants services but a young person does not. Examples might include when the parent or guardian has their own experience and knows the value of therapy; when the parent or guardian is scared for the young person’s safety and well-being; when the young person is worried about stigma if peers find out; when the young person feels they are okay and these particular services are not what they need right now; when the young person is experiencing symptoms that make it difficult to recognize the need for care or feel they deserve care; or when parents or guardians have not been taught about typical adolescent development and expected behaviors."
   },
   {
     "sec": "About Consent",
     "type": "reflection",
     "eyebrow": "CONSENT",
     "title": "Take a Moment",
-    "audioFile": "./slide%2026.m4a",
+    "audioFile": "./narration-page-24.mp3",
     "transcript": "So as you think about these situations that I’ve shared and that you’ve come up with, I’m interested in you spending some time with this reflection prompt: Young people being able to access behavioral health care services is important because… How might you finish that statement?",
     "prompt": "Young people being able to access behavioral health services is important because…"
   },
@@ -1866,8 +1924,8 @@ const DATA = [
     "type": "wordwall",
     "eyebrow": "CONSENT",
     "title": "When a Young Person Is Not Interested in Services",
-    "audioFile": "./slide%2027.m4a",
-    "transcript": "Increasing access to behavioral health care is not the same as engaging young people and families in the services we have. There are many reasons why a young person, parents, and families may not want to participate in our services. They may have had negative experiences with the behavioral health care system. They may not have been told what behavioral health care means, what it looks like, or why it could be helpful. They may worry about other people knowing, or they may not see a need. Think about how a young person may communicate that they do not want to participate. They may not show up, or they may show up and not participate. How are we reading those cues, and what are we assuming they mean? A young person may show up and not participate, and that does not necessarily mean they do not want to be there. Instead of deciding we have nothing to offer unless someone says they want our services, or saying someone is not ready, we need to examine how we have engaged that person or family. We will honor when a young person does not want services while making sure we have done our part to engage individuals, families, and communities. Trauma-informed care is an engagement tool. If a young person communicates that they are not interested in services, honor that and consider how to support the young person and family in that moment.",
+    "audioFile": "./narration-page-25.mp3",
+    "transcript": "Increasing access to behavioral health care is not the same as engaging young people and families in the services we have. There are many reasons why a young person, parents, and families may not want to participate in our services. We’ve touched on a few of these in this module, and we can add negative experiences individuals and families have had with the behavioral health care system. Or maybe they haven’t even been told what behavioral health care means—what it looks like or why it would be helpful. Maybe they worry about other people knowing. Maybe they just don’t see a need. I’m wondering what other examples you know of or have experienced about why people don’t want to, or are hesitant to, engage in behavioral health care. I’m also interested in you thinking about how a young person is communicating to us that they don’t want to participate. How might that show up? Is it not showing up to a service, session, or group? Is it showing up and not participating? And how are we reading those cues from the young person? What is our interpretation of what that may be? A young person may be showing up and not participating; that doesn’t necessarily mean they don’t want to be there. So as behavioral health providers, instead of thinking we have nothing to offer unless someone says they want our services, or saying someone isn’t ready, we need to first ask and deeply examine how we have engaged that person or family. It is important to hear that they may not want services, and we’re going to honor that, but I want to make sure we’ve done our part to engage individuals, families, and communities. I often say that trauma-informed care is actually an engagement tool. I may need housing, behavioral health supports, and access to basic needs, but I need those things to be done in a trauma-informed way in order for me to feel safe enough to engage with you. So if a young person communicates that they’re not interested in services, we’re going to honor that, and we’re going to think about how we can support that young person and the family in that moment.",
     "items": [
       "Does not attend",
       "Attends but stays quiet",
@@ -1877,7 +1935,14 @@ const DATA = [
       "Has had harmful experiences with systems",
       "Does not understand what behavioral health care involves"
     ],
-    "intro": "Increasing access is not the same as engagement. Before deciding a young person is “not ready,” examine how services were explained, offered, and experienced."
+    "intro": "Increasing access is not the same as engagement. Before deciding a young person is “not ready,” examine how services were explained, offered, and experienced.",
+    "refs": [
+      15,
+      16,
+      17,
+      18,
+      30
+    ]
   },
   {
     "sec": "About Consent",
@@ -1890,6 +1955,13 @@ const DATA = [
       "Offer a few meetings with everyone to explore what may be helpful.",
       "Offer two or three low-pressure sessions so the young person can experience the service before deciding.",
       "Connect the young person with peer support services."
+    ],
+    "refs": [
+      15,
+      16,
+      17,
+      18,
+      30
     ]
   },
   {
@@ -1901,6 +1973,13 @@ const DATA = [
       "Invite the young person to visit the service setting, or consider offering services in other places and spaces.",
       "Evaluate whether the organization’s spaces, processes, and access points are youth-centered and culturally responsive.",
       "Assist with planning and practical supports while the young person decides what they want to do."
+    ],
+    "refs": [
+      15,
+      16,
+      17,
+      18,
+      30
     ]
   },
   {
@@ -1912,6 +1991,13 @@ const DATA = [
       "Oregon law allows parents and guardians to consent to services for young people under 18 without the young person’s consent. This commonly arises when a young child may not understand the service well enough to consent, or when a young person needs a higher level of care such as day treatment or residential services.",
       "Young people cannot sign themselves out of those more intensive services on their own.",
       "<strong>It is always best to have everyone in the family involved in building an intervention plan to care for the young person.</strong>"
+    ],
+    "refs": [
+      6,
+      9,
+      12,
+      13,
+      14
     ]
   },
   {
@@ -1921,6 +2007,12 @@ const DATA = [
     "body": [
       "A young person may say no and a provider may still be legally able to provide services when a parent or guardian consents.",
       "The clinical question remains: what approach is likely to be useful, respectful, and engaging for this young person and family?"
+    ],
+    "refs": [
+      6,
+      12,
+      14,
+      18
     ]
   },
   {
@@ -1972,26 +2064,27 @@ const DATA = [
     "type": "lawQuote",
     "eyebrow": "INVOLVEMENT",
     "title": "What Oregon Law Says",
-    "audioFile": "./slide%2032-36.m4a",
-    "transcript": "So now we’re going to talk about parent and legal guardian involvement. The law says providers are required to involve the parent or legal guardian in the minor’s care prior to the end of services unless there are clear and documented clinical reasons. Pause here and think about what questions or wonderings you have about that requirement.",
-    "startTime": 0.69,
-    "endTime": 28.77,
+    "audioFile": "./narration-page-32.mp3",
+    "transcript": "So now we’re going to talk about parent and legal guardian involvement. The law says that providers are required to involve the parent or legal guardian in the minor’s care prior to the end of services unless there are clear and documented clinical reasons. I want to stop here for a minute and invite you to pause and think about: What questions do you have about that? What might you be wondering?",
     "body": [
       "Providers are required to involve the parent or legal guardian in the minor’s care prior to the end of services unless there are clear and documented clinical reasons not to."
     ],
     "quote": "Providers are required to involve the parent or legal guardian in the minor’s care prior to the end of services unless there are clear and documented clinical reasons not to.",
     "source": "ORS 109.675",
-    "reflectionPrompt": "What questions or wonderings do you have after hearing this requirement?"
+    "reflectionPrompt": "What questions or wonderings do you have after hearing this requirement?",
+    "refs": [
+      6,
+      13,
+      14
+    ]
   },
   {
     "sec": "About Involvement",
     "type": "questionList",
     "eyebrow": "INVOLVEMENT",
     "title": "Questions the Law Does Not Clearly Answer",
-    "audioFile": "./slide%2032-36.m4a",
-    "transcript": "For a lot of people, the questions are: What does involve mean? What is sufficient to meet involvement standards? What does prior to the end of services mean? How soon to the end of services? And what are clinical reasons? These are common questions we hear in communities. The answer is that there are not clear answers to these questions. We will talk about some ideas and guidance, but this is one of those places where you will want to consult with your organization, clinical supervisor, professional organization, and organizational policies as you think about how this will show up in practice.",
-    "startTime": 34.72,
-    "endTime": 69.14,
+    "audioFile": "./narration-page-33.mp3",
+    "transcript": "For a lot of people, what they’re wondering is: What does involve mean? What is sufficient to meet involvement standards? What does prior to the end of services mean? How soon to the end of services? And what are clinical reasons? These are common questions we hear as we’re talking about this in communities. And the answer is that there are not clear answers to these questions. We’re going to talk about some ideas and guidance, but this is one of those places where you’ll want to consult with your organization, your clinical supervisor, and your professional organization as you think about how this is going to show up for you.",
     "qList": [
       "What does “involve” mean?",
       "What is sufficient to meet involvement standards?",
@@ -2001,6 +2094,11 @@ const DATA = [
     ],
     "a": [
       "There are not clear answers to these questions. Use your organization, clinical supervision, professional consultation, and organizational policies as you determine how this applies in practice."
+    ],
+    "refs": [
+      6,
+      13,
+      14
     ]
   },
   {
@@ -2008,12 +2106,18 @@ const DATA = [
     "type": "text",
     "eyebrow": "INVOLVEMENT",
     "title": "Involvement Is Best Practice",
-    "audioFile": "./slide%2032-36.m4a",
-    "transcript": "Before we go too far, I want to center that best practice is to have everyone involved as much as possible, as much as is safe, and as people are willing to be involved. This is not just a legal checkbox. Involvement is best practice when it is psychologically and physically safe to do so, and it reflects what we know supports better outcomes.",
-    "startTime": 73.23,
-    "endTime": 102.47,
+    "audioFile": "./narration-page-34.mp3",
+    "transcript": "So before we go too far into this, I want to center that the best practice is always to have everyone involved as much as possible, as much as is safe, and as people are willing to have involved. This isn’t just a legal checkbox, like, ‘Oh, it says I have to involve parents and legal guardians.’ It is best practice when it is psychologically and physically safe to do so, and it reflects what we know supports better outcomes.",
     "body": [
       "Best practice is to involve everyone as much as possible, as much as is physically and psychologically safe, and as people are willing to participate. This is more than a legal checkbox. Family involvement, when safe and workable, can support better outcomes."
+    ],
+    "refs": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
     ]
   },
   {
@@ -2021,12 +2125,15 @@ const DATA = [
     "type": "text",
     "eyebrow": "INVOLVEMENT",
     "title": "You Are Not Alone",
-    "audioFile": "./slide%2032-36.m4a",
-    "transcript": "When we talk about the ambiguity of involvement, I want to honor that this is the complexity of our work. Much of our work in behavioral health care is grounded in honoring and working with complexity. When this feels like too much or too complex, take a breath and know that you have the skills for this. Working in the human condition is working with complexity, and you are not alone. Talk with your supervisor, consult with peers and the literature, talk with colleagues, and use your professional organizations. You are not alone, and you have the skills to work with this complexity.",
-    "startTime": 106.94,
-    "endTime": 150.9,
+    "audioFile": "./narration-page-35.mp3",
+    "transcript": "I also want to, when we talk about the ambiguity of this involvement, honor that this is the complexity of our work. Much of our work in behavioral health care is grounded in honoring and working with complexity. At times when this feels like it may be too much or too complex, take a breath and know that you have the skills for this. Working in the human condition is working with complexity, and you’re not alone. Talk to your supervisor if you have access. Consult with peers. Consult with the literature. Talk to colleagues. Talk to your professional organizations. You’re not alone, and you have the skills to negotiate this.",
     "body": [
       "Much of our work in this field is about honoring and working with complexity. We have the skills for this, and you are not alone. Utilize supervision, peer consultation, professional guidance, and organizational policies."
+    ],
+    "refs": [
+      18,
+      23,
+      26
     ]
   },
   {
@@ -2037,13 +2144,17 @@ const DATA = [
     "transcript": "As you think about how to involve parents and legal guardians, remember: how we do the work is the work. How we involve people, ask for consent, explain choices, listen, and make decisions is part of trauma-informed and culturally responsive practice.",
     "body": [
       "How we ask, involve, explain, listen, and make decisions is part of trauma-informed and culturally responsive practice."
+    ],
+    "refs": [
+      18,
+      23
     ]
   },
   {
     "sec": "About Involvement",
     "type": "objectives",
     "eyebrow": "INVOLVEMENT",
-    "title": "Centering Safety and Care",
+    "title": "Involvement Is Not Required If…",
     "items": [
       "The parent or legal guardian refuses involvement.",
       "Involvement is clinically contraindicated.",
@@ -2055,7 +2166,14 @@ const DATA = [
         "Document your rationale for including or excluding parents and guardians.",
         "Use supervision and organizational policies to support the decision."
       ]
-    }
+    },
+    "intro": "Involvement is not required if:",
+    "refs": [
+      6,
+      14,
+      21,
+      27
+    ]
   },
   {
     "sec": "About Involvement",
@@ -2076,7 +2194,13 @@ const DATA = [
       "With the young person’s consent, the provider and young person create a letter or other communication together."
     ],
     "intro": "Involving parents and guardians can be done in different ways. Having the young person lead the effort is best whenever possible. Some examples include:",
-    "closingPrompt": "What other ideas do you have for involving parents or guardians?"
+    "closingPrompt": "What other ideas do you have for involving parents or guardians?",
+    "refs": [
+      23,
+      24,
+      25,
+      26
+    ]
   },
   {
     "sec": "About Involvement",
@@ -2118,15 +2242,17 @@ const DATA = [
     "type": "definition",
     "eyebrow": "DISCLOSURE",
     "title": "Disclosure, Defined",
-    "audioFile": "./slide%2041-45.m4a",
-    "transcript": "All right, we’ve talked about consent and parent and legal guardian involvement. We’re now going to talk about disclosure. Disclosure means sharing relevant information regarding the minor’s diagnosis and treatment with the minor’s parent or legal guardian. That is what the Oregon statute says.",
-    "startTime": 1.64,
-    "endTime": 20.06,
+    "audioFile": "./narration-page-42.mp3",
+    "transcript": "All right, we’ve talked about consent, and we’ve talked about parent and legal guardian involvement. We’re now going to talk about disclosure. Disclosure means sharing relevant information regarding the minor’s diagnosis and treatment with the minor’s parent or legal guardian. That’s what the statute says in Oregon.",
     "terms": [
       {
         "term": "Disclosure",
         "def": "is sharing 'relevant information regarding the minor's diagnosis and treatment to the minor's parent or legal guardian…' (ORS 109.680)"
       }
+    ],
+    "refs": [
+      27,
+      29
     ]
   },
   {
@@ -2134,10 +2260,8 @@ const DATA = [
     "type": "reflection",
     "eyebrow": "DISCLOSURE",
     "title": "Take a Moment",
-    "audioFile": "./slide%2041-45.m4a",
-    "transcript": "Take a pause and reflect: How do you understand the difference between disclosure and confidentiality? This is a larger conversation than this module. Know the difference, talk with one another, and seek clarity within your organization when you need it.",
-    "startTime": 22.08,
-    "endTime": 40.25,
+    "audioFile": "./narration-page-43.mp3",
+    "transcript": "So take a pause moment. Do some reflection on: How do you understand the difference between disclosure and confidentiality? This is a bigger conversation than this module, so take a minute. Again, know the difference. Talk amongst each other at your organization to get clarity if you need to do that.",
     "prompt": "How do you understand the difference between disclosure and confidentiality?"
   },
   {
@@ -2145,10 +2269,8 @@ const DATA = [
     "type": "objectives",
     "eyebrow": "DISCLOSURE",
     "title": "When Disclosure Is Not Required",
-    "audioFile": "./slide%2046.m4a",
-    "transcript": "When disclosure is not required, you do not have to disclose to an individual if you reasonably believe the individual has abused or neglected the minor, including subjecting the minor to domestic violence; reasonably believe disclosure of the minor’s information to the individual could endanger the minor; determine that it is not in the minor’s best interest to disclose the information to the individual; or the minor has emancipated or separated from the parent for at least 90 days. Make sure you document your rationale for not disclosing information.",
-    "startTime": null,
-    "endTime": null,
+    "audioFile": "./narration-page-44.mp3",
+    "transcript": "So when disclosure is not required, you do not have to disclose to an individual if you reasonably believe the individual has abused or neglected the minor, including subjecting the minor to domestic violence; or you reasonably believe disclosure of the minor’s information to the individual could endanger the minor; or determine that it is not in the minor’s best interest to disclose the information to the individual; or if the minor has emancipated and/or is separated from the parent for at least 90 days. As you will see throughout, make sure you document your rationale for not disclosing information.",
     "items": [
       "Reasonably believe the individual has abused or neglected the minor, including subjecting the minor to domestic violence; or",
       "Reasonably believe disclosure of the minor’s information to the individual could endanger the minor; or",
@@ -2160,17 +2282,19 @@ const DATA = [
       "items": [
         "Document the rationale for not disclosing information."
       ]
-    }
+    },
+    "refs": [
+      27,
+      29
+    ]
   },
   {
     "sec": "About Disclosure",
     "type": "objectives",
     "eyebrow": "DISCLOSURE",
     "title": "When Disclosure Is Required",
-    "audioFile": "./slide%2041-45.m4a",
-    "transcript": "When disclosure is required, you must disclose to an individual, regardless of the young person’s consent, if it is clinically appropriate and in the minor’s best interest; if the minor must be admitted to a detoxification program; if the minor is at risk of committing suicide and inpatient care is not necessary or practical; or if the minor is at risk of suicide and requires hospital admission. Again, use consultation and supervision, and document your rationale.",
-    "startTime": 88.54,
-    "endTime": 113.76,
+    "audioFile": "./narration-page-45.mp3",
+    "transcript": "When disclosure is required, you must disclose to an individual, regardless of the young person’s consent, if it is clinically appropriate and in the minor’s best interest; if the minor must be admitted to a detoxification program; if the minor is at risk of committing suicide and inpatient care is not necessary or practical; or the minor is at risk of suicide and requires hospital admission. Again, you’re going to consult and use supervision, and you’re going to document your rationale for that.",
     "items": [
       "It is clinically appropriate and in the minor’s best interests; or",
       "The minor must be admitted to a detoxification program; or",
@@ -2182,20 +2306,25 @@ const DATA = [
       "items": [
         "Use supervision and consultation, and document your rationale."
       ]
-    }
+    },
+    "refs": [
+      21,
+      27
+    ]
   },
   {
     "sec": "About Disclosure",
     "type": "text",
     "eyebrow": "DISCLOSURE",
     "title": "Substance Use Disorder Treatment",
-    "audioFile": "./slide%2041-45.m4a",
-    "transcript": "When we talk about disclosure and confidentiality, we have to step back because there is another layer. Confidentiality of drug and alcohol records is governed by federal law. Federal law makes clear that if a young person has consented to their own treatment under applicable state law, that young person must also consent to disclosure of those records. Consult your agency policies and procedures, legal counsel, and professional organizations so you understand the intersection of federal and state law in this area. The Oregon Health Authority memo on minor consent is also helpful here.",
-    "startTime": 43.39,
-    "endTime": 82.25,
+    "audioFile": "./narration-page-46.mp3",
+    "transcript": "So when we talk about disclosure and confidentiality, we have to kind of step back a minute because there’s another layer. Did you know that confidentiality of drug and alcohol records is governed by federal law? Specifically, federal law makes clear that if a youth has consented to their own treatment under applicable state law, that youth must also consent to disclosure of those records. I am going to encourage you to make sure you consult with your own agency’s policies, procedures, legal counsel, and professional organizations to make sure you understand that. If a youth is consenting to substance use treatment, they are also going to be consenting to disclosure of those records. The Oregon Health Authority memo on minor consent is very helpful here.",
     "body": [
       "“Providers should also be aware that federal law governing the confidentiality of drug and alcohol records clearly indicates that if a youth has consented to their own treatment under applicable state law, a youth must consent to disclosure of those records.” (42 CFR 2.14(a))",
       "Providers should consult their own legal counsel, organizational policies, and professional guidance about the intersection of federal and state law in this area."
+    ],
+    "refs": [
+      14
     ]
   },
   {
@@ -2206,18 +2335,42 @@ const DATA = [
     "body": [
       "Consent to disclosure is a separate consent process required in addition to consent to behavioral health services."
     ],
-    "audioFile": "./slide%2041-45.m4a",
-    "startTime": 115.44,
-    "endTime": 123.82,
-    "transcript": "Disclosure requires unique consent. Consent to disclosure is required in addition to consent to behavioral health services. Do not conflate the two. A young person consenting to treatment does not automatically mean they consented to have that information disclosed."
+    "audioFile": "./narration-page-47.mp3",
+    "transcript": "Disclosure requires unique consent. Consent to disclosure is required in addition to consent to behavioral health services. Don’t conflate the two. A young person consenting to treatment does not automatically mean they consented to have that information disclosed, unless, again, you’re providing substance use-related services.",
+    "refs": [
+      12,
+      14,
+      27,
+      28,
+      29
+    ]
+  },
+  {
+    "sec": "About Disclosure",
+    "type": "objectives",
+    "eyebrow": "DISCLOSURE",
+    "title": "Plan for Disclosure",
+    "items": [
+      "Be transparent with young people and families about legal obligations and the provider’s preferences about disclosure.",
+      "Share how families and young people will be notified about requests for disclosure and the provider’s response.",
+      "Continue to revisit and revise disclosure agreements with young people and parents or guardians.",
+      "Be aware of legal, ethical, and organizational obligations about disclosure."
+    ],
+    "refs": [
+      12,
+      14,
+      27,
+      28,
+      29
+    ]
   },
   {
     "sec": "About Disclosure",
     "type": "reflection",
     "eyebrow": "DISCLOSURE",
     "title": "Take a Moment",
-    "audioFile": "./slide%2049.m4a",
-    "transcript": "We’ve been talking about disclosure, including who gets to know, how people know, and when disclosure is required. Parents and legal guardians may also learn that a young person is accessing behavioral health care in indirect ways. The young person may tell them. A provider may determine it is necessary to talk with them. A parent or guardian may see the young person receiving care, notice the young person going to a particular place or organization, or services may appear on an insurance statement or provider bill. What other ways might a parent or legal guardian learn that a young person is receiving behavioral health care?",
+    "audioFile": "./narration-page-49.mp3",
+    "transcript": "So we’ve been talking about, when we talk about disclosure, about when people need to know, who gets to know, how people know, and when you must tell, and those types of things. I also just want to bring forward the ways in which parents and legal guardians may know a young person is accessing behavioral health care that isn’t necessarily direct, or isn’t about signing a consent or disclosure form. One way is that the young person might let them know. The parent or legal guardian may know because the young person is talking to them about it. A parent or legal guardian may know because the provider has deemed it necessary to talk to them. A guardian or parent may see the young person getting care. They may notice the young person going to a particular space, place, or organization. And then the services might show up on an insurance bill, or they may get a bill from the provider. Can you think of other ways in which parents and legal guardians might know that a young person is accessing behavioral health care? Think about that as we hold all of these concepts together.",
     "prompt": "How might a parent or guardian learn that a young person is receiving behavioral health care?",
     "hints": [
       "The young person tells them.",
@@ -2271,8 +2424,8 @@ const DATA = [
     "type": "objectives",
     "eyebrow": "CONSIDERATIONS",
     "title": "Considerations",
-    "audioFile": "./slide%2051.m4a",
-    "transcript": "Before we apply these concepts and the parts of the law to real-life scenarios, hold onto a few overarching considerations. Ask how decisions may help, harm, or hurt, and for whom. Strive to increase access to care. Notice and celebrate accessing care as a developmental milestone. Interpret words and situations with care and attention. Consult with young people, families, colleagues, supervisors, and professional organizations. Document what was done and why. Know what resources are available for the young person and family. Review the reasons and limitations related to disclosure with young people and parents or guardians throughout care.",
+    "audioFile": "./narration-page-52.mp3",
+    "transcript": "So before we move on to trying to apply these concepts and the parts of the law to real-life scenarios, I just want to do some overarching considerations, some things to hold onto as we move forward. Remember that we’re always thinking about how our decisions might hurt, how they might help, and for whom. Know that we’re grounding all of this in striving to increase access to care, and that accessing care is a developmental milestone to be noticed and celebrated. Interpretation of words and situations needs care and attention for providers, families, and young people. We want to constantly be in consultation with young people, families, colleagues, supervisors, and professional organizations as we’re trying to figure out particular scenarios or experiences. We want to document what was done and why. Why did we do what we did? Why did we make the decisions we made? Make sure we know what resources are available for young people and families in our communities, or maybe in nearby communities. We want to review the reasons and limitations about disclosure with young people and guardians and continue to review those throughout care. All right, we’re going to apply all of this learning about consent, disclosure, and involvement to some case scenarios.",
     "items": [
       "How might decisions harm or hurt, and for whom?",
       "Strive to increase access to care.",
@@ -2282,6 +2435,13 @@ const DATA = [
       "Document what was done and why it was imperative.",
       "Know what resources are available for the young person and family.",
       "Review reasons and limitations about disclosure with young people and parents or guardians throughout care."
+    ],
+    "refs": [
+      18,
+      21,
+      23,
+      26,
+      30
     ]
   },
   {
@@ -2307,6 +2467,13 @@ const DATA = [
         "q": "The young person consents to you talking with their parents. The parents then request treatment notes to consult with the pediatrician. Do you provide the notes?",
         "a": "Revisit the original agreement about disclosure. Talk with the young person and family about the purpose and any concerns. Request a release of information. Consent to treatment does not automatically authorize release of records."
       }
+    ],
+    "refs": [
+      6,
+      12,
+      14,
+      21,
+      27
     ]
   },
   {
@@ -2323,6 +2490,13 @@ const DATA = [
         "q": "What are best practices at this time?",
         "a": "Offer a few meetings with the entire family, meet with the parents to provide support and strategies, offer the young person a few low-pressure sessions to see whether the service is useful, and provide other resources such as youth-run peer groups or parent support groups."
       }
+    ],
+    "refs": [
+      6,
+      12,
+      14,
+      21,
+      27
     ]
   },
   {
@@ -2343,6 +2517,13 @@ const DATA = [
         "q": "Can the provider deny treatment?",
         "a": "A residential facility may deny admission if it cannot meet the young person’s needs or lacks a bed. It cannot deny care solely because of a child’s intellectual or developmental disability or because the young person does not consent."
       }
+    ],
+    "refs": [
+      6,
+      12,
+      14,
+      21,
+      27
     ]
   },
   {
@@ -2367,6 +2548,13 @@ const DATA = [
         "q": "Can the young person request to see the psychiatrist’s documentation?",
         "a": "Yes."
       }
+    ],
+    "refs": [
+      6,
+      12,
+      14,
+      21,
+      27
     ]
   },
   {
@@ -2399,6 +2587,12 @@ const DATA = [
         "correct": 0,
         "a": "Yes. Involving the young person’s support network is best practice when it is psychologically and physically safe."
       }
+    ],
+    "refs": [
+      6,
+      12,
+      21,
+      27
     ]
   },
   {
@@ -2426,12 +2620,36 @@ const DATA = [
     "type": "citations",
     "title": "Citations & References",
     "items": [
-      "World Health Organization. Mental health: Promoting and protecting human rights (2023).",
-      "Oregon Revised Statutes: ORS 109.640; ORS 109.675; ORS 109.680; ORS 109.065.",
-      "Oregon Administrative Rules: OAR 309-019-0105; OAR 309-008-0200; OAR 413-070-0000.",
-      "42 CFR Part 2, including 42 CFR 2.14(a), confidentiality of substance use disorder patient records.",
-      "Oregon House Bill 3139 (2021).",
-      "Oregon Health Authority. Understanding Minor Consent and Confidentiality in Health Care in Oregon; Minor Consent for Behavioral Health Services guidance."
+      "World Health Organization. “Mental Health: Promoting and Protecting Human Rights.” Questions and Answers, October 6, 2023. <a href=\"https://www.who.int/news-room/questions-and-answers/item/mental-health-promoting-and-protecting-human-rights\" target=\"_blank\" rel=\"noopener noreferrer\">Open source</a>.",
+      "Oregon Health Authority. <em>Student Health Survey, 2025</em>. <a href=\"https://www.oregon.gov/oha/PH/BIRTHDEATHCERTIFICATES/SURVEYS/Documents/SHS/2025/Reports/State%20of%20Oregon%202025.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open report</a>.",
+      "Or. Rev. Stat. § 430.637. <a href=\"https://oregon.public.law/statutes/ors_430.637\" target=\"_blank\" rel=\"noopener noreferrer\">Open statute</a>.",
+      "Or. Admin. R. 309-019-0105, Definitions. <a href=\"https://oregon.public.law/rules/oar_309-019-0105\" target=\"_blank\" rel=\"noopener noreferrer\">Open rule</a>.",
+      "Or. Admin. R. 309-008-0200. <a href=\"https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=246082\" target=\"_blank\" rel=\"noopener noreferrer\">Open rule</a>.",
+      "Or. Rev. Stat. § 109.675.",
+      "Or. Admin. R. 413-070.",
+      "Neilson, G., and G. Chaimowitz. “Informed Consent to Treatment in Psychiatry.” <em>Canadian Journal of Psychiatry</em> 60, no. 4 (April 2015): 1–11. PMCID: PMC4459249.",
+      "Disability Rights Oregon. “Mental Health Law in Oregon.” <a href=\"https://www.droregon.org/disability-rights-oregon-resources/mental-health-law-in-oregon\" target=\"_blank\" rel=\"noopener noreferrer\">Open resource</a>.",
+      "National Association of Social Workers. “Social Workers’ Ethical Responsibilities to Clients.” <em>Code of Ethics</em>. <a href=\"https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English/Social-Workers-Ethical-Responsibilities-to-Clients\" target=\"_blank\" rel=\"noopener noreferrer\">Open code</a>.",
+      "Shah, P., I. Thornton, N. L. Kopitnik, et al. “Informed Consent.” In <em>StatPearls</em>. Updated November 24, 2024. <a href=\"https://www.ncbi.nlm.nih.gov/books/NBK430827\" target=\"_blank\" rel=\"noopener noreferrer\">Open source</a>.",
+      "Oregon Health Authority, Public Health Division, Adolescent and School Health Unit. <em>Understanding Minor Consent and Confidentiality in Health Care in Oregon</em>. Version 3, December 2023. <a href=\"https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le9541.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open guide</a>.",
+      "Oregon Health Authority. “Frequently Asked Questions.” <a href=\"https://www.oregon.gov/oha/hsd/bh-child-family/pages/faq.aspx\" target=\"_blank\" rel=\"noopener noreferrer\">Open FAQ</a>.",
+      "Oregon Health Authority. “Minor Consent Memo.” <a href=\"https://www.oregon.gov/oha/HSD/BH-Child-Family/Documents/Minor%20Consent%20Memo.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open memo</a>.",
+      "Oostermeijer, S., M. Williamson, A. Nicholas, A. Machlin, and B. Bassilios. “Implementing and Delivering Youth Mental Health Services: Approaches Taken by the Australian Primary Health Network ‘Lead Sites.’” <em>International Journal of Environmental Research and Public Health</em> 19, no. 17 (2022): 10494. <a href=\"https://doi.org/10.3390/ijerph191710494\" target=\"_blank\" rel=\"noopener noreferrer\">Open article</a>.",
+      "Runyan, T., K. Hassmiller Lich, K. Umble, K. Li, K. Daniel Baca, and L. Frerichs. “Identifying Engagement Strategies for Hispanic Youth with Anxiety: A Youth-Centered, Design-Thinking Approach.” <em>PLoS One</em> 20, no. 2 (2025): e0317142. <a href=\"https://doi.org/10.1371/journal.pone.0317142\" target=\"_blank\" rel=\"noopener noreferrer\">Open article</a>.",
+      "Dunne, T., L. Bishop, S. Avery, and S. Darcy. “A Review of Effective Youth Engagement Strategies for Mental Health and Substance Use Interventions.” <em>Journal of Adolescent Health</em> 60, no. 5 (2017): 487–512. <a href=\"https://doi.org/10.1016/j.jadohealth.2016.11.019\" target=\"_blank\" rel=\"noopener noreferrer\">Open article</a>.",
+      "Substance Abuse and Mental Health Services Administration. <em>Practical Guide for Implementing a Trauma-Informed Approach</em>. PEP23-06-05-005, 2023. <a href=\"https://library.samhsa.gov/product/practical-guide-implementing-trauma-informed-approach/pep23-06-05-005\" target=\"_blank\" rel=\"noopener noreferrer\">Open guide</a>.",
+      "Substance Abuse and Mental Health Services Administration. <em>2025 National Guidelines for a Behavioral Health Coordinated System of Crisis Care</em>. PEP24-01-037, 2025. <a href=\"https://988crisissystemshelp.samhsa.gov/sites/default/files/2025-04/national-guidelines-crisis-care-pep24-01-037.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open guidelines</a>.",
+      "Fialkowski et al. “Trauma-Informed Care for Hospitalized Adolescents.” See Reference 22.",
+      "Oregon Health Authority. “Oregon Law and Best Practice Involving Parents, Guardians, and Trusted Adults in Youth Suicide Prevention.” <a href=\"https://www.oregon.gov/oha/HSD/BH-Child-Family/Documents/HB3139-Parent-Guardian-FAQ.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open guidance</a>.",
+      "Fialkowski, A., K. Shaffer, M. Ball-Burack, T. L. Brooks, N. T. Trinh, J. E. Potter, and K. R. Peeler. “Trauma-Informed Care for Hospitalized Adolescents.” <em>Current Pediatrics Reports</em> 10, no. 2 (2022): 45–54. <a href=\"https://doi.org/10.1007/s40124-022-00262-3\" target=\"_blank\" rel=\"noopener noreferrer\">Open article</a>.",
+      "National Child Traumatic Stress Network. “Family, Youth, and Provider Partnerships: Introduction.” <a href=\"https://www.nctsn.org/trauma-informed-care/family-youth-provider-partnerships/introduction\" target=\"_blank\" rel=\"noopener noreferrer\">Open resource</a>.",
+      "Diamond, G., and A. Josephson. “Family-Based Treatment Research: A 10-Year Update.” <em>Journal of the American Academy of Child & Adolescent Psychiatry</em> 44 (2005): 872–87. <a href=\"https://doi.org/10.1097/01.chi.0000169010.96783.4e\" target=\"_blank\" rel=\"noopener noreferrer\">Open article</a>.",
+      "Pine, A. E., M. G. Baumann, G. Modugno, et al. “Parental Involvement in Adolescent Psychological Interventions: A Meta-Analysis.” <em>Clinical Child and Family Psychology Review</em> 27 (2024): 1–20. <a href=\"https://doi.org/10.1007/s10567-024-00481-8\" target=\"_blank\" rel=\"noopener noreferrer\">Open article</a>.",
+      "Youth MOVE National and Be Strong Families. <em>Family Engagement & Support in Youth Mental Health Care: An Implementation Guide for Care Providers</em>. 2025. <a href=\"https://youthmovenational.org/wp-content/uploads/2025/02/Family-Engagement-Support-in-Youth-Mental-Health-Care-final.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open guide</a>.",
+      "Or. Rev. Stat. § 109.680.",
+      "U.S. Department of Health and Human Services. “HIPAA Privacy Rule and Sharing Information Related to Mental Health.” <a href=\"https://www.hhs.gov/sites/default/files/hipaa-privacy-rule-and-sharing-info-related-to-mental-health.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Open guidance</a>.",
+      "Oregon Health Authority. <em>Understanding Minor Consent and Confidentiality in Health Care in Oregon</em>. See Reference 12.",
+      "Becker, K. D., M. Boustani, R. Gellatly, and B. F. Chorpita. “Forty Years of Engagement Research in Children’s Mental Health Services: Multidimensional Measurement and Practice Elements.” <em>Journal of Clinical Child & Adolescent Psychology</em> 47, no. 1 (2018): 1–23."
     ]
   },
   {
@@ -2458,6 +2676,11 @@ const DATA = [
         "title": "Questions and Feedback",
         "desc": "Send scenarios, helpful resources, questions, or other feedback to Trauma Informed Oregon.",
         "url": "mailto:info@traumainformedoregon.org"
+      },
+      {
+        "title": "Confidentiality: Understand the Basics — Oregon Family Support Network Parent Warmline",
+        "desc": "Family-facing guidance on HIPAA, minor consent, releases of information, substance use treatment privacy, and when information may be shared.",
+        "url": "https://www.reachoutoregon.org/emergency-room-resources/know-what-to-expect-and-your-rights/confidentiality-understanding-the-basics/"
       }
     ]
   },
@@ -2602,7 +2825,7 @@ const AUDIO_FILE_ALIASES = {
 };
 
 function renderAudio(fileName, startTime, endTime, slide) {
-  if (!fileName) return "";
+  if (!fileName) return (slide && slide.transcript) ? buildSlideTextAlternative(slide) : "";
 
   const files = AUDIO_FILE_ALIASES[fileName] || [
     fileName,
@@ -2741,7 +2964,8 @@ function renderConceptTable(slide){
 }
 
 function render(slide){
-  let eyebrow = `<div class="eyebrow-row mono">${slide.sec}<span class="pos">${current+1} / ${DATA.length}</span></div>`;
+  const refNums = Array.isArray(slide.refs) && slide.refs.length ? `<span class="slide-reference-numbers" aria-label="References ${slide.refs.join(", ")}">[${slide.refs.join(", ")}]</span>` : "";
+  let eyebrow = `<div class="eyebrow-row mono">${slide.sec}${refNums}<span class="pos">${current+1} / ${DATA.length}</span></div>`;
   let audioPlayer = renderAudio(slide.audioFile, slide.startTime, slide.endTime, slide);
 
   // Cover Slide
@@ -2981,7 +3205,7 @@ function render(slide){
       <h2 class="slide-title" tabindex="-1">${slide.title}</h2>
       <div class="accordion-list">
         ${questions.map((q,idx)=>`
-          <details class="accordion" ${idx===0 ? 'open' : ''}>
+          <details class="accordion">
             <summary>
               <span class="accordion-number">${String(idx+1).padStart(2,'0')}</span>
               <span>${q}</span>
@@ -3004,7 +3228,7 @@ function render(slide){
       <div class="quiz-intro">${slide.intro||''}</div>
       <div class="accordion-list quiz-accordion-list">
         ${(slide.items||[]).map((q, idx)=>`
-          <details class="accordion quiz-accordion" ${idx===0 ? 'open' : ''}>
+          <details class="accordion quiz-accordion">
             <summary><span class="accordion-number">Q${String(idx+1).padStart(2,'0')}</span><span>${q.q}</span><span class="sr-only">Expand or collapse question</span></summary>
             <div class="accordion-body">
               <div class="opt-list" style="margin-top:14px;">
@@ -3027,8 +3251,8 @@ function render(slide){
       <div class="accordion-list scenario-questions">
         ${(slide.qa||[]).map((pair,idx) => `
           <details class="accordion">
-            <summary><span class="accordion-number">Q${String(idx+1).padStart(2,'0')}</span><span>${pair.q}</span><span class="sr-only">Reveal suggested response</span></summary>
-            <div class="accordion-body"><p><strong>Suggested response:</strong> ${pair.a}</p></div>
+            <summary><span class="accordion-number">Q${String(idx+1).padStart(2,'0')}</span><span>${pair.q}</span><span class="sr-only">Reveal answer</span></summary>
+            <div class="accordion-body"><p><strong>Answer:</strong> ${pair.a}</p></div>
           </details>
         `).join('')}
       </div>
@@ -3067,7 +3291,7 @@ function render(slide){
       <p class="quiz-intro">Choose True or False, then review the response.</p>
       <div class="accordion-list">
         ${(slide.qa||[]).map((item,idx)=>`
-          <details class="accordion" ${idx===0 ? 'open' : ''}>
+          <details class="accordion">
             <summary><span class="accordion-number">${String(idx+1).padStart(2,'0')}</span><span>${item.q}</span></summary>
             <div class="accordion-body">
               <div class="tf-buttons">
@@ -3086,14 +3310,10 @@ function render(slide){
   if (slide.type === "citations") {
     return eyebrow + `<div class="card">
       <h2 class="slide-title" tabindex="-1">${slide.title}</h2>
-      <div class="resource-grid">
-        ${(slide.items||[]).map((item,idx)=>`
-          <div class="resource-card">
-            <h3>Reference ${String(idx+1).padStart(2,'0')}</h3>
-            <p>${item}</p>
-          </div>
-        `).join("")}
-      </div>
+      <p class="slide-intro">Reference numbers shown in the upper-right area of content pages correspond to this list.</p>
+      <ol class="reference-list">
+        ${(slide.items||[]).map(item=>`<li>${item}</li>`).join("")}
+      </ol>
     </div>`;
   }
 
@@ -3511,6 +3731,7 @@ function update(){
   });
 
   initializeAccordions();
+  document.querySelectorAll('#stage details').forEach(d => { d.open = false; });
   initializeSlideNarration();
   restoreVisibleReflection();
 
