@@ -1875,6 +1875,7 @@ const DATA = [
     "eyebrow": "CONSENT",
     "title": "Take a Moment: Access Without Parent or Guardian Consent",
     "prompt": "Where might it be helpful for a young person to access behavioral health care without needing a parent or guardian’s consent?",
+    "note": "Take a minute to write down or share what comes to mind.",
     "hints": [
       "A parent or guardian is not available due to work or location, or does not feel safe engaging with the agency or system.",
       "A young person does not want to burden their parent or guardian.",
@@ -1882,8 +1883,7 @@ const DATA = [
       "The guardian does not read or understand the language in which services are provided.",
       "It would be unsafe for the young person if the guardian found out.",
       "The young person is unsure of, or may not yet understand, the benefit and process of involving their parent or guardian."
-    ],
-    "transcript": "Let’s take a moment to explore the reasons, experiences, and needs related to consent and access. Take a minute to type, write down, or share situations where it might be helpful for a young person to access behavioral health care without needing a parent or guardian’s consent. Some experiences we hear about include when a parent or legal guardian is not available because of work or location, or does not feel safe engaging with the agency or system; when a young person does not want to burden their parent or legal guardian; when the young person is practicing developmentally appropriate independence; when the guardian does not read or understand the language in which services are provided; when it could be unsafe for the young person if the parent or guardian found out; or when the young person is not sure, or may not yet understand, the benefit and process of involving a parent or legal guardian."
+    ]
   },
   {
     "sec": "About Consent",
@@ -1891,6 +1891,7 @@ const DATA = [
     "eyebrow": "CONSENT",
     "title": "Take a Moment: When a Young Person Does Not Want Services",
     "prompt": "Where might a parent or guardian want services while a young person does not?",
+    "note": "Take a minute to write down or share what comes to mind. What else came to mind for you?",
     "hints": [
       "The parent or guardian has their own experience and knows the value of therapy.",
       "The parent or guardian is scared for the young person’s safety and well-being.",
@@ -1898,8 +1899,7 @@ const DATA = [
       "The young person feels they are okay and these particular services are not what they need.",
       "The young person is experiencing symptoms that affect awareness of the need for care, or they do not feel they deserve care.",
       "The parent or guardian has not been taught about typical adolescent development and expected behaviors."
-    ],
-    "transcript": "Take a minute to type, write this down, or share ideas about situations where a parent or guardian wants services but a young person does not. Examples might include when the parent or guardian has their own experience and knows the value of therapy; when the parent or guardian is scared for the young person’s safety and well-being; when the young person is worried about stigma if peers find out; when the young person feels they are okay and these particular services are not what they need right now; when the young person is experiencing symptoms that make it difficult to recognize the need for care or feel that they deserve care; or when the parents or guardians have not been taught about typical adolescent development and expected behaviors. These are some examples. What else came to mind for you?"
+    ]
   },
   {
     "sec": "About Consent",
@@ -2270,8 +2270,8 @@ const DATA = [
     "type": "text",
     "eyebrow": "DISCLOSURE",
     "title": "Substance Use Disorder Treatment",
-    "audioFile": "./narration-page-46.mp3",
-    "transcript": "When we talk about disclosure and confidentiality, we have to step back for a minute because there is another layer. Confidentiality of drug and alcohol records is governed by federal law. Specifically, federal law makes clear that if a young person has consented to their own treatment under applicable state law, that young person must also consent to disclosure of those records. Make sure you consult with your agency’s policies and procedures, legal counsel, and professional organizations so you understand this. The Oregon Health Authority memo on minor consent is also helpful here.",
+    "audioFile": "./narration-page-47.mp3",
+    "transcript": "So when you talk about disclosure and confidentiality we have to kind of step back a minute cause there's another layer. Did you know that confidentiality of drug and alcohol records is governed by federal law. Specifically, federal law makes clear that if a youth has consented to their own treatment under applicable state law, that youth must also consent to disclosure of those records.",
     "body": [
       "“Providers should also be aware that federal law governing the confidentiality of drug and alcohol records clearly indicates that if a youth has consented to their own treatment under applicable state law, a youth must consent to disclosure of those records.” (42 CFR 2.14(a))",
       "Providers should consult their own legal counsel, organizational policies, and professional guidance about the intersection of federal and state law in this area."
@@ -2288,8 +2288,8 @@ const DATA = [
     "body": [
       "Consent to disclosure is a separate consent process required in addition to consent to behavioral health services."
     ],
-    "audioFile": "./narration-page-47.mp3",
-    "transcript": "Disclosure requires unique consent. Consent to disclosure is required in addition to consent to behavioral health services. Do not conflate the two. A young person consenting to treatment does not automatically mean they consented to have that information disclosed, unless, again, you are providing substance use-related services."
+    "audioFile": "./narration-page-46.mp3",
+    "transcript": "I'm gonna encourage you to make sure you consult with your own agency's policies, procedures, legal counsel, professional organizations to make sure you understand that. But if a youth is consenting to substance use treatment, they are also gonna be consenting to disclosure of those records. The Oregon Health Authority memo on minor consent is very helpful here."
   },
   {
     "sec": "About Disclosure",
@@ -3182,6 +3182,7 @@ function render(slide){
       <div class="reflection-kicker">Pause · Notice · Consider</div>
       <h2 class="slide-title">${slide.title}</h2>
       <div class="reflection-prompt">${slide.prompt}</div>
+      ${slide.note ? `<p class="slide-intro" style="margin-top:-8px;">${slide.note}</p>` : ''}
       ${hasNotes ? `<textarea class="notes" data-reflection-key="${reflectionKeyForSlide(slide)}" placeholder="Type your reflection notes here..."></textarea>` : ''}
       ${slide.hints ? `<details class="reflection-reveal"><summary>Reveal examples</summary><div><ul>${slide.hints.map(h=>`<li>${h}</li>`).join('')}</ul></div></details>` : ''}
       ${audioPlayer}
