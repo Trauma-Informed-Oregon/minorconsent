@@ -1712,7 +1712,7 @@ const DATA = [
     "terms": [
       {
         "term": "Minor",
-        "def": "defined as someone 14 years of age or older (as it pertains to access to behavioral health care). There are exclusions for emancipated minors. (ORS 109.675) Minor is a legal term — in practice, and throughout this presentation, we use the terms young persons, youth, etc."
+        "def": "means someone under the age of 18. For the specific purpose of accessing behavioral health care, a minor 14 years of age or older may consent to their own care. There are exclusions for emancipated minors. (ORS 109.675) Minor is a legal term — in practice, and throughout this presentation, we use the terms young persons, youth, etc."
       },
       {
         "term": "Guardian",
@@ -1720,7 +1720,7 @@ const DATA = [
       },
       {
         "term": "Parent",
-        "def": "means the genetic or adoptive mother and the legal parent of the child. A legal parent is a person who has adopted the child or whose parentage has been established or declared under ORS 109.065."
+        "def": "means the legal parent of the child. A legal parent is a person who has adopted the child or whose parentage has been established or declared under ORS 109.065."
       }
     ],
     "refs": [
@@ -1772,10 +1772,10 @@ const DATA = [
           "Any adult the young person lives with",
           "A relative who provides day-to-day care",
           "An individual granted guardianship of a child through a judgment of the court",
-          "A caseworker assigned to the young person"
+          "A caseworker, without a court-ordered guardianship"
         ],
         "correct": 2,
-        "why": "Guardianship is a court determination. (OAR 413-070-0000(38))"
+        "why": "Guardianship is a court determination. (OAR 413-070-0000(38)) In practice this can get murky: a caseworker may act on behalf of a child in state custody, but that role is not the same as being a court-appointed guardian under this definition unless a guardianship judgment has actually been granted."
       },
       {
         "q": "'Behavioral health' as defined in OAR 309-008-0200 includes:",
@@ -2198,11 +2198,11 @@ const DATA = [
     "eyebrow": "DISCLOSURE",
     "title": "Disclosure, Defined",
     "audioFile": "./narration-page-42.mp3",
-    "transcript": "All right, we have talked about consent, and we have talked about parent and legal guardian involvement. We are now going to talk about disclosure. Disclosure means sharing relevant information regarding the minor’s diagnosis and treatment with the minor’s parent or legal guardian. That is what the statute says in Oregon.",
+    "transcript": "All right, we have talked about consent, and we have talked about parent and legal guardian involvement. We are now going to talk about disclosure. Disclosure means sharing relevant information regarding the minor’s diagnosis and treatment with the minor’s parent or legal guardian, without the minor’s consent. That is what the statute says in Oregon.",
     "terms": [
       {
         "term": "Disclosure",
-        "def": "is sharing 'relevant information regarding the minor's diagnosis and treatment to the minor's parent or legal guardian…' (ORS 109.680)"
+        "def": "is sharing 'relevant information regarding the minor's diagnosis and treatment to the minor's parent or legal guardian…' without the minor's consent. (ORS 109.680)"
       }
     ],
     "refs": [
@@ -2247,11 +2247,11 @@ const DATA = [
     "eyebrow": "DISCLOSURE",
     "title": "When Disclosure Is Required",
     "audioFile": "./narration-page-45.mp3",
-    "transcript": "When disclosure is required, you must disclose to an individual, regardless of the young person’s consent, if it is clinically appropriate and in the minor’s best interest; if the minor must be admitted to a detoxification program; if the minor is at risk of committing suicide and inpatient care is not necessary or practical; or the minor is at risk of suicide and requires hospital admission. Again, you are going to consult and use supervision, and you are going to document your rationale for that.",
+    "transcript": "When disclosure is required, you must disclose to an individual, regardless of the young person’s consent, if it is clinically appropriate and in the minor’s best interest; if the minor must be admitted to a detoxification program; if the minor is at risk of suicide and inpatient care is not necessary or practical; or the minor is at risk of suicide and requires hospital admission. Again, you are going to consult and use supervision, and you are going to document your rationale for that.",
     "items": [
       "It is clinically appropriate and in the minor’s best interests; or",
       "The minor must be admitted to a detoxification program; or",
-      "The minor is at risk of committing suicide and inpatient care is not necessary or practical. (ORS 109.680); or",
+      "The minor is at risk of suicide and inpatient care is not necessary or practical. (ORS 109.680); or",
       "The minor is at risk of suicide and requires hospital admission. (ORS 109.680(b); HB 3139-2021)"
     ],
     "extraList": {
@@ -2482,13 +2482,14 @@ const DATA = [
         "a": "No. The provider may support the family, offer referrals, and work on engagement strategies with the young person."
       },
       {
-        "q": "Is consent to treatment the same as consent to release records?",
+        "q": "Consent to treatment is the same as consent to release records.",
         "correct": 1,
-        "a": "No. They are related but separate processes."
+        "a": "False. They are related but separate processes."
       },
       {
         "q": "Can a residential facility see a young person when the young person consents but the parent or guardian does not?",
         "correct": 1,
+        "format": "yesno",
         "a": "No. Parent or guardian consent is necessary for this higher level of care."
       },
       {
@@ -3191,20 +3192,24 @@ function render(slide){
   if (slide.type === "truefalse") {
     return eyebrow + `<div class="card">
       <h2 class="slide-title" tabindex="-1">${slide.title}</h2>
-      <p class="quiz-intro">Choose True or False, then review the response.</p>
+      <p class="quiz-intro">Choose the correct response, then review the explanation.</p>
       <div class="accordion-list">
-        ${(slide.qa||[]).map((item,idx)=>`
+        ${(slide.qa||[]).map((item,idx)=>{
+          const isYesNo = item.format === 'yesno';
+          const label1 = isYesNo ? 'Yes' : 'True';
+          const label2 = isYesNo ? 'No' : 'False';
+          return `
           <details class="accordion">
             <summary><span class="accordion-number">${String(idx+1).padStart(2,'0')}</span><span>${item.q}</span></summary>
             <div class="accordion-body">
               <div class="tf-buttons">
-                <button type="button" class="opt" data-correct="${item.correct===0}" data-why="${escapeTextAlternative(item.a)}" onclick="checkAnswer(this)">True</button>
-                <button type="button" class="opt" data-correct="${item.correct===1}" data-why="${escapeTextAlternative(item.a)}" onclick="checkAnswer(this)">False</button>
+                <button type="button" class="opt" data-correct="${item.correct===0}" data-why="${escapeTextAlternative(item.a)}" onclick="checkAnswer(this)">${label1}</button>
+                <button type="button" class="opt" data-correct="${item.correct===1}" data-why="${escapeTextAlternative(item.a)}" onclick="checkAnswer(this)">${label2}</button>
               </div>
               <div class="why" role="status" aria-live="polite"></div>
             </div>
           </details>
-        `).join('')}
+        `;}).join('')}
       </div>
     </div>`;
   }
