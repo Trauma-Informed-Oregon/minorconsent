@@ -3706,33 +3706,78 @@ update();
 
   const allowedParent = 'https://traumainformedoregon.org';
 
-  function reportHeight() {
-    const height = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight
-    );
+  const embedStyle = document.createElement('style');
+  embedStyle.textContent = `
+    .app {
+      min-height: 0 !important;
+      align-items: stretch;
+    }
 
-    window.parent.postMessage(
-      {
-        type: 'tio-embed-height',
-        height: height
-      },
-      allowedParent
-    );
+    main {
+      min-height: 0 !important;
+    }
+
+    .sidebar {
+      position: relative !important;
+      top: auto !important;
+      height: auto !important;
+      min-height: 0 !important;
+      overflow: visible !important;
+    }
+
+    .sidebar-footer {
+      margin-top: 16px !important;
+    }
+  `;
+  document.head.appendChild(embedStyle);
+
+  function reportHeight() {
+    requestAnimationFrame(function () {
+      const app = document.querySelector('.app');
+
+      const height = Math.ceil(Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        app ? app.scrollHeight : 0,
+        app ? app.getBoundingClientRect().height : 0
+      ));
+
+      window.parent.postMessage(
+        {
+          type: 'tio-embed-height',
+          height: height
+        },
+        allowedParent
+      );
+    });
   }
 
   window.addEventListener('load', reportHeight);
   window.addEventListener('resize', reportHeight);
 
-  if ('ResizeObserver' in window) {
-    const observer = new ResizeObserver(reportHeight);
-    observer.observe(document.documentElement);
+  const app = document.querySelector('.app');
+
+  if (app && 'ResizeObserver' in window) {
+    const resizeObserver = new ResizeObserver(reportHeight);
+    resizeObserver.observe(app);
+  }
+
+  if (app && 'MutationObserver' in window) {
+    const mutationObserver = new MutationObserver(reportHeight);
+
+    mutationObserver.observe(app, {
+      childList: true,
+      subtree: true,
+      attributes: true
+    });
   }
 
   document.addEventListener('click', function () {
     setTimeout(reportHeight, 50);
-    setTimeout(reportHeight, 250);
+    setTimeout(reportHeight, 300);
   });
+
+  reportHeight();
 })();
 </script>
 
