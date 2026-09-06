@@ -3699,5 +3699,42 @@ window.auditNarrationAssignments = auditNarrationAssignments;
 buildSidebarNav();
 update();
 </script>
+
+<script>
+(function () {
+  if (window.self === window.top) return;
+
+  const allowedParent = 'https://traumainformedoregon.org';
+
+  function reportHeight() {
+    const height = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+
+    window.parent.postMessage(
+      {
+        type: 'tio-embed-height',
+        height: height
+      },
+      allowedParent
+    );
+  }
+
+  window.addEventListener('load', reportHeight);
+  window.addEventListener('resize', reportHeight);
+
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(reportHeight);
+    observer.observe(document.documentElement);
+  }
+
+  document.addEventListener('click', function () {
+    setTimeout(reportHeight, 50);
+    setTimeout(reportHeight, 250);
+  });
+})();
+</script>
+
 </body>
 </html>
