@@ -1475,7 +1475,26 @@
     .eyebrow-row{flex-wrap:wrap;}
     .eyebrow-row .pos{margin-left:auto;}
   }
+/* Embedded mode */
+.is-embedded .app,
+.is-embedded main {
+  min-height: 0;
+}
 
+.is-embedded .sidebar {
+  position: relative;
+  height: auto;
+  top: auto;
+  overflow: visible;
+}
+
+.is-embedded .topbar {
+  position: static;
+}
+
+.is-embedded .skip-link {
+  position: absolute;
+}
 </style>
 </head>
 <body>
@@ -3699,6 +3718,40 @@ window.auditNarrationAssignments = auditNarrationAssignments;
 buildSidebarNav();
 update();
 </script> 
+  <script>
+(function(){
+  if (window.parent === window) return;
+
+  document.documentElement.classList.add('is-embedded');
+
+  var last = 0;
+
+  function sendHeight() {
+    var h = Math.ceil(
+      document.documentElement.getBoundingClientRect().height
+    );
+
+    if (Math.abs(h - last) < 2) return;
+
+    last = h;
+
+    window.parent.postMessage(
+      { tioToolHeight: h },
+      '*'
+    );
+  }
+
+  window.addEventListener('load', sendHeight);
+
+  if (window.ResizeObserver) {
+    new ResizeObserver(sendHeight).observe(document.body);
+  }
+
+  document.addEventListener('click', function() {
+    setTimeout(sendHeight, 200);
+  });
+})();
+</script>
   <style>
 .audio-player-container:has(source[src*="narration-page-21.mp3"]) .transcript-content,
 .audio-player-container:has(source[src*="narration-page-21.mp3"]) .transcript-content p {
