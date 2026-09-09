@@ -1495,6 +1495,70 @@
 .is-embedded .skip-link {
   position: absolute;
 }
+
+  /* ---------- Mobile app shell ---------- */
+  .mobile-bar{ display:none; }
+  .sidebar-scrim{ display:none; }
+
+  @media (max-width:860px){
+    .mobile-bar{
+      display:flex; align-items:center; gap:12px;
+      position:sticky; top:0; z-index:60;
+      background:var(--tio-navy-dark); color:#FFFFFF;
+      padding:10px 14px;
+    }
+    .mb-toggle{
+      flex:0 0 auto; width:44px; height:44px;
+      display:grid; place-items:center;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:10px; color:#FFFFFF;
+      font-size:18px; cursor:pointer; font-family:inherit;
+    }
+    .mb-meta{ flex:1; min-width:0; }
+    .mb-title{
+      font-size:13px; font-weight:700;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .mb-progress{
+      height:4px; border-radius:3px;
+      background:rgba(255,255,255,.18);
+      margin-top:6px; overflow:hidden;
+    }
+    .mb-fill{ height:100%; width:0%; background:var(--tio-teal); transition:width .3s ease; }
+    .mb-count{ font-size:11px; color:var(--tio-light-blue); margin-top:4px; }
+
+    .app{ display:block; }
+    .sidebar{
+      position:fixed; top:0; left:0; bottom:0;
+      width:82%; max-width:320px; height:100%;
+      overflow-y:auto; z-index:80;
+      transform:translateX(-100%);
+      transition:transform .25s ease;
+    }
+    .nav-open .sidebar{ transform:translateX(0); }
+    .sidebar-scrim{
+      position:fixed; inset:0; z-index:70;
+      background:rgba(0,0,0,.45);
+    }
+    .nav-open .sidebar-scrim{ display:block; }
+    body.nav-open{ overflow:hidden; }
+
+    .topbar{ display:none; }
+    main{ min-height:0; }
+    .stage-wrap{ padding:20px 16px 100px; }
+    .card{ padding:22px 18px; }
+
+    .controls{
+      position:fixed; left:0; right:0; bottom:0; z-index:60;
+      margin:0; max-width:none;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+      background:var(--card);
+      border-top:1px solid var(--line);
+      box-shadow:0 -4px 14px rgba(34,54,69,.10);
+    }
+    .controls .nav-btn{ min-height:46px; }
+  }
 </style>
 </head>
 <body>
@@ -3762,5 +3826,50 @@ update();
   text-align: left !important;
 }
 </style>
+<script>
+(function(){
+  var app = document.querySelector('.app');
+  if (!app) return;
+
+  var bar = document.createElement('div');
+  bar.className = 'mobile-bar';
+  bar.innerHTML =
+    '<button type="button" class="mb-toggle" aria-label="Open section menu" aria-expanded="false">&#9776;</button>'
+    + '<div class="mb-meta"><div class="mb-title">Minor Consent to Behavioral Health Care</div>'
+    + '<div class="mb-progress"><div class="mb-fill"></div></div>'
+    + '<div class="mb-count"></div></div>';
+  document.body.insertBefore(bar, app);
+
+  var scrim = document.createElement('div');
+  scrim.className = 'sidebar-scrim';
+  document.body.appendChild(scrim);
+
+  var toggle = bar.querySelector('.mb-toggle');
+  function setOpen(open){
+    document.body.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  }
+  toggle.addEventListener('click', function(){
+    setOpen(!document.body.classList.contains('nav-open'));
+  });
+  scrim.addEventListener('click', function(){ setOpen(false); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') setOpen(false);
+  });
+  var nav = document.getElementById('sectionNav');
+  if (nav) nav.addEventListener('click', function(){ setOpen(false); });
+
+  var fill = bar.querySelector('.mb-fill');
+  var count = bar.querySelector('.mb-count');
+  function sync(){
+    var pct = Math.round(((current + 1) / DATA.length) * 100);
+    fill.style.width = pct + '%';
+    count.textContent = 'Page ' + (current + 1) + ' of ' + DATA.length;
+  }
+  var previous = update;
+  update = function(){ previous.apply(this, arguments); sync(); };
+  sync();
+})();
+</script>
 </body>
 </html>
