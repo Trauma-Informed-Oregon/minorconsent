@@ -1559,6 +1559,18 @@
     }
     .controls .nav-btn{ min-height:46px; }
   }
+
+  /* ---------- Saved progress control ---------- */
+  .clear-progress-btn{
+    display:block; width:100%; margin-top:12px;
+    padding:10px 12px; min-height:44px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:8px; color:#C6D8E1;
+    font-family:inherit; font-size:11.5px; font-weight:600;
+    text-align:left; cursor:pointer;
+  }
+  .clear-progress-btn:hover{ background:rgba(255,255,255,.16); color:#FFFFFF; }
 </style>
 </head>
 <body>
@@ -3385,7 +3397,7 @@ function render(slide){
           </button>
         </div>
         <div class="certificate-note" id="certificatePrivacyNote">
-          Nothing is stored. Your name, progress, and typed reflections remain only in memory while this page is open and reset when it is refreshed or closed.
+          Your place in the module and any notes you type are saved on this device only, so you can pick up where you left off. They are never sent to Trauma Informed Oregon and are not visible to anyone else online. They clear automatically after 30 days. Your name is not stored. If you are on a shared or public computer, use “Clear my saved place and notes” in the section menu before you finish.
         </div>
       </div></details>
 
@@ -3869,6 +3881,79 @@ update();
   var previous = update;
   update = function(){ previous.apply(this, arguments); sync(); };
   sync();
+})();
+</script>
+<script>
+(function(){
+  var KEY = 'tio-minorconsent-v1';
+  var MAX_AGE_MS = 1000 * 60 * 60 * 24 * 30;
+  var timer = null;
+
+  function read(){
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      if (!raw) return null;
+      var d = JSON.parse(raw);
+      if (!d || typeof d.page !== 'number') return null;
+      if (!d.ts || (Date.now() - d.ts) > MAX_AGE_MS) {
+        window.localStorage.removeItem(KEY);
+        return null;
+      }
+      return d;
+    } catch (e) { return null; }
+  }
+
+  function write(){
+    try {
+      var notes = {};
+      reflectionDrafts.forEach(function(v, k){
+        if (v && v.trim()) notes[k] = v;
+      });
+      window.localStorage.setItem(KEY, JSON.stringify({
+        page: current, notes: notes, ts: Date.now()
+      }));
+    } catch (e) {}
+  }
+
+  window.tioClearSavedProgress = function(){
+    try { window.localStorage.removeItem(KEY); } catch (e) {}
+    reflectionDrafts.clear();
+    current = 0;
+    update();
+  };
+
+  var saved = read();
+  if (saved) {
+    var notes = saved.notes || {};
+    Object.keys(notes).forEach(function(k){ reflectionDrafts.set(k, notes[k]); });
+    if (saved.page > 0 && saved.page < DATA.length) current = saved.page;
+    update();
+  }
+
+  var previous = update;
+  update = function(){ previous.apply(this, arguments); write(); };
+
+  document.addEventListener('input', function(e){
+    var t = e.target;
+    if (!t || !t.matches || !t.matches('textarea.notes[data-reflection-key]')) return;
+    reflectionDrafts.set(t.dataset.reflectionKey, t.value);
+    clearTimeout(timer);
+    timer = setTimeout(write, 400);
+  });
+
+  var footer = document.querySelector('.sidebar-footer');
+  if (footer) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'clear-progress-btn';
+    btn.textContent = 'Clear my saved place and notes';
+    btn.addEventListener('click', function(){
+      if (window.confirm('This erases your saved place in the module and any notes you typed on this device. This cannot be undone.')) {
+        window.tioClearSavedProgress();
+      }
+    });
+    footer.appendChild(btn);
+  }
 })();
 </script>
 </body>
